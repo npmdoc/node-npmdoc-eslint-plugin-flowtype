@@ -1,0 +1,938 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/gajus/eslint-plugin-flowtype#readme">eslint-plugin-flowtype (v2.32.1)</a>
+</h1>
+<h4>Flowtype linting rules for ESLint.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-flowtype">module eslint-plugin-flowtype</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-flowtype.</span>configs</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-flowtype.</span>rules</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-flowtype.</span>rules.no-primitive-constructor-types</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-flowtype.</span>rules.object-type-delimiter</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-flowtype.</span>rules.valid-syntax</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-flowtype.</span>rulesConfig</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-flowtype.rules">module eslint-plugin-flowtype.rules</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-flowtype.rules.boolean-style">
+            function <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.</span>boolean-style
+            <span class="apidocSignatureSpan">(cb, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-flowtype.rules.define-flow-type">
+            function <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.</span>define-flow-type
+            <span class="apidocSignatureSpan">(cb, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-flowtype.rules.delimiter-dangle">
+            function <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.</span>delimiter-dangle
+            <span class="apidocSignatureSpan">(cb, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-flowtype.rules.generic-spacing">
+            function <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.</span>generic-spacing
+            <span class="apidocSignatureSpan">(cb, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-flowtype.rules.no-dupe-keys">
+            function <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.</span>no-dupe-keys
+            <span class="apidocSignatureSpan">(cb, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-flowtype.rules.no-types-missing-file-annotation">
+            function <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.</span>no-types-missing-file-annotation
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-flowtype.rules.no-weak-types">
+            function <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.</span>no-weak-types
+            <span class="apidocSignatureSpan">(cb, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-flowtype.rules.require-parameter-type">
+            function <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.</span>require-parameter-type
+            <span class="apidocSignatureSpan">(cb, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-flowtype.rules.require-return-type">
+            function <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.</span>require-return-type
+            <span class="apidocSignatureSpan">(cb, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-flowtype.rules.require-valid-file-annotation">
+            function <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.</span>require-valid-file-annotation
+            <span class="apidocSignatureSpan">(cb, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-flowtype.rules.require-variable-type">
+            function <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.</span>require-variable-type
+            <span class="apidocSignatureSpan">(cb, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-flowtype.rules.semi">
+            function <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.</span>semi
+            <span class="apidocSignatureSpan">(cb, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-flowtype.rules.sort-keys">
+            function <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.</span>sort-keys
+            <span class="apidocSignatureSpan">(cb, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-flowtype.rules.space-after-type-colon">
+            function <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.</span>space-after-type-colon
+            <span class="apidocSignatureSpan">(cb, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-flowtype.rules.space-before-generic-bracket">
+            function <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.</span>space-before-generic-bracket
+            <span class="apidocSignatureSpan">(cb, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-flowtype.rules.space-before-type-colon">
+            function <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.</span>space-before-type-colon
+            <span class="apidocSignatureSpan">(cb, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-flowtype.rules.type-id-match">
+            function <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.</span>type-id-match
+            <span class="apidocSignatureSpan">(cb, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-flowtype.rules.union-intersection-spacing">
+            function <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.</span>union-intersection-spacing
+            <span class="apidocSignatureSpan">(cb, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-flowtype.rules.use-flow-type">
+            function <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.</span>use-flow-type
+            <span class="apidocSignatureSpan">(cb, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.</span>no-primitive-constructor-types</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.</span>object-type-delimiter</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.</span>valid-syntax</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-flowtype.rules.no-primitive-constructor-types">module eslint-plugin-flowtype.rules.no-primitive-constructor-types</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-flowtype.rules.no-primitive-constructor-types.create">
+            function <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.no-primitive-constructor-types.</span>create
+            <span class="apidocSignatureSpan">(cb, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.no-primitive-constructor-types.</span>meta</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.no-primitive-constructor-types.</span>schema</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-flowtype.rules.object-type-delimiter">module eslint-plugin-flowtype.rules.object-type-delimiter</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-flowtype.rules.object-type-delimiter.create">
+            function <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.object-type-delimiter.</span>create
+            <span class="apidocSignatureSpan">(cb, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.object-type-delimiter.</span>schema</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-flowtype.rules.valid-syntax">module eslint-plugin-flowtype.rules.valid-syntax</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-flowtype.rules.valid-syntax.create">
+            function <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.valid-syntax.</span>create
+            <span class="apidocSignatureSpan">(cb, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.valid-syntax.</span>meta</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-flowtype" id="apidoc.module.eslint-plugin-flowtype">module eslint-plugin-flowtype</a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-flowtype.rules" id="apidoc.module.eslint-plugin-flowtype.rules">module eslint-plugin-flowtype.rules</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-flowtype.rules.boolean-style" id="apidoc.element.eslint-plugin-flowtype.rules.boolean-style">
+        function <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.</span>boolean-style
+        <span class="apidocSignatureSpan">(cb, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">boolean-style = function (cb, context) {
+<span class="apidocCodeCommentSpan">/* [wrapped with _.partial] */
+</span>  var checkThisFile = !_lodash2.default.get(context, 'settings.flowtype.onlyFilesWithFlowAnnotation') || (0, _isFlowFile2.default
+)(context);
+
+  if (!checkThisFile) {
+    return function () {};
+  }
+
+  return cb(context);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-flowtype.rules.define-flow-type" id="apidoc.element.eslint-plugin-flowtype.rules.define-flow-type">
+        function <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.</span>define-flow-type
+        <span class="apidocSignatureSpan">(cb, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">define-flow-type = function (cb, context) {
+<span class="apidocCodeCommentSpan">/* [wrapped with _.partial] */
+</span>  var checkThisFile = !_lodash2.default.get(context, 'settings.flowtype.onlyFilesWithFlowAnnotation') || (0, _isFlowFile2.default
+)(context);
+
+  if (!checkThisFile) {
+    return function () {};
+  }
+
+  return cb(context);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-flowtype.rules.delimiter-dangle" id="apidoc.element.eslint-plugin-flowtype.rules.delimiter-dangle">
+        function <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.</span>delimiter-dangle
+        <span class="apidocSignatureSpan">(cb, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">delimiter-dangle = function (cb, context) {
+<span class="apidocCodeCommentSpan">/* [wrapped with _.partial] */
+</span>  var checkThisFile = !_lodash2.default.get(context, 'settings.flowtype.onlyFilesWithFlowAnnotation') || (0, _isFlowFile2.default
+)(context);
+
+  if (!checkThisFile) {
+    return function () {};
+  }
+
+  return cb(context);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-flowtype.rules.generic-spacing" id="apidoc.element.eslint-plugin-flowtype.rules.generic-spacing">
+        function <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.</span>generic-spacing
+        <span class="apidocSignatureSpan">(cb, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generic-spacing = function (cb, context) {
+<span class="apidocCodeCommentSpan">/* [wrapped with _.partial] */
+</span>  var checkThisFile = !_lodash2.default.get(context, 'settings.flowtype.onlyFilesWithFlowAnnotation') || (0, _isFlowFile2.default
+)(context);
+
+  if (!checkThisFile) {
+    return function () {};
+  }
+
+  return cb(context);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-flowtype.rules.no-dupe-keys" id="apidoc.element.eslint-plugin-flowtype.rules.no-dupe-keys">
+        function <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.</span>no-dupe-keys
+        <span class="apidocSignatureSpan">(cb, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">no-dupe-keys = function (cb, context) {
+<span class="apidocCodeCommentSpan">/* [wrapped with _.partial] */
+</span>  var checkThisFile = !_lodash2.default.get(context, 'settings.flowtype.onlyFilesWithFlowAnnotation') || (0, _isFlowFile2.default
+)(context);
+
+  if (!checkThisFile) {
+    return function () {};
+  }
+
+  return cb(context);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-flowtype.rules.no-types-missing-file-annotation" id="apidoc.element.eslint-plugin-flowtype.rules.no-types-missing-file-annotation">
+        function <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.</span>no-types-missing-file-annotation
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">no-types-missing-file-annotation = function (context) {
+  // Skip flow files
+  if ((0, _utilities.isFlowFile)(context, false)) {
+    return {};
+  }
+
+  var reporter = function reporter(node, type) {
+    context.report({
+      data: { type },
+      message: 'Type {{type}} require valid Flow declaration.',
+      node
+    });
+  };
+
+  return {
+    ImportDeclaration(node) {
+      if (node.importKind === 'type') {
+        reporter(node, 'imports');
+      }
+      if (node.importKind === 'value' &amp;&amp; node.specifiers.some(function (specifier) {
+        return specifier.importKind === 'type';
+      })) {
+        reporter(node, 'imports');
+      }
+    },
+    TypeAlias(node) {
+      reporter(node, 'aliases');
+    },
+    TypeAnnotation(node) {
+      reporter(node, 'annotations');
+    }
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-flowtype.rules.no-weak-types" id="apidoc.element.eslint-plugin-flowtype.rules.no-weak-types">
+        function <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.</span>no-weak-types
+        <span class="apidocSignatureSpan">(cb, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">no-weak-types = function (cb, context) {
+<span class="apidocCodeCommentSpan">/* [wrapped with _.partial] */
+</span>  var checkThisFile = !_lodash2.default.get(context, 'settings.flowtype.onlyFilesWithFlowAnnotation') || (0, _isFlowFile2.default
+)(context);
+
+  if (!checkThisFile) {
+    return function () {};
+  }
+
+  return cb(context);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-flowtype.rules.require-parameter-type" id="apidoc.element.eslint-plugin-flowtype.rules.require-parameter-type">
+        function <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.</span>require-parameter-type
+        <span class="apidocSignatureSpan">(cb, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">require-parameter-type = function (cb, context) {
+<span class="apidocCodeCommentSpan">/* [wrapped with _.partial] */
+</span>  var checkThisFile = !_lodash2.default.get(context, 'settings.flowtype.onlyFilesWithFlowAnnotation') || (0, _isFlowFile2.default
+)(context);
+
+  if (!checkThisFile) {
+    return function () {};
+  }
+
+  return cb(context);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-flowtype.rules.require-return-type" id="apidoc.element.eslint-plugin-flowtype.rules.require-return-type">
+        function <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.</span>require-return-type
+        <span class="apidocSignatureSpan">(cb, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">require-return-type = function (cb, context) {
+<span class="apidocCodeCommentSpan">/* [wrapped with _.partial] */
+</span>  var checkThisFile = !_lodash2.default.get(context, 'settings.flowtype.onlyFilesWithFlowAnnotation') || (0, _isFlowFile2.default
+)(context);
+
+  if (!checkThisFile) {
+    return function () {};
+  }
+
+  return cb(context);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-flowtype.rules.require-valid-file-annotation" id="apidoc.element.eslint-plugin-flowtype.rules.require-valid-file-annotation">
+        function <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.</span>require-valid-file-annotation
+        <span class="apidocSignatureSpan">(cb, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">require-valid-file-annotation = function (cb, context) {
+<span class="apidocCodeCommentSpan">/* [wrapped with _.partial] */
+</span>  var checkThisFile = !_lodash2.default.get(context, 'settings.flowtype.onlyFilesWithFlowAnnotation') || (0, _isFlowFile2.default
+)(context);
+
+  if (!checkThisFile) {
+    return function () {};
+  }
+
+  return cb(context);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-flowtype.rules.require-variable-type" id="apidoc.element.eslint-plugin-flowtype.rules.require-variable-type">
+        function <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.</span>require-variable-type
+        <span class="apidocSignatureSpan">(cb, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">require-variable-type = function (cb, context) {
+<span class="apidocCodeCommentSpan">/* [wrapped with _.partial] */
+</span>  var checkThisFile = !_lodash2.default.get(context, 'settings.flowtype.onlyFilesWithFlowAnnotation') || (0, _isFlowFile2.default
+)(context);
+
+  if (!checkThisFile) {
+    return function () {};
+  }
+
+  return cb(context);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-flowtype.rules.semi" id="apidoc.element.eslint-plugin-flowtype.rules.semi">
+        function <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.</span>semi
+        <span class="apidocSignatureSpan">(cb, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">semi = function (cb, context) {
+<span class="apidocCodeCommentSpan">/* [wrapped with _.partial] */
+</span>  var checkThisFile = !_lodash2.default.get(context, 'settings.flowtype.onlyFilesWithFlowAnnotation') || (0, _isFlowFile2.default
+)(context);
+
+  if (!checkThisFile) {
+    return function () {};
+  }
+
+  return cb(context);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-flowtype.rules.sort-keys" id="apidoc.element.eslint-plugin-flowtype.rules.sort-keys">
+        function <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.</span>sort-keys
+        <span class="apidocSignatureSpan">(cb, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sort-keys = function (cb, context) {
+<span class="apidocCodeCommentSpan">/* [wrapped with _.partial] */
+</span>  var checkThisFile = !_lodash2.default.get(context, 'settings.flowtype.onlyFilesWithFlowAnnotation') || (0, _isFlowFile2.default
+)(context);
+
+  if (!checkThisFile) {
+    return function () {};
+  }
+
+  return cb(context);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-flowtype.rules.space-after-type-colon" id="apidoc.element.eslint-plugin-flowtype.rules.space-after-type-colon">
+        function <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.</span>space-after-type-colon
+        <span class="apidocSignatureSpan">(cb, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">space-after-type-colon = function (cb, context) {
+<span class="apidocCodeCommentSpan">/* [wrapped with _.partial] */
+</span>  var checkThisFile = !_lodash2.default.get(context, 'settings.flowtype.onlyFilesWithFlowAnnotation') || (0, _isFlowFile2.default
+)(context);
+
+  if (!checkThisFile) {
+    return function () {};
+  }
+
+  return cb(context);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-flowtype.rules.space-before-generic-bracket" id="apidoc.element.eslint-plugin-flowtype.rules.space-before-generic-bracket">
+        function <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.</span>space-before-generic-bracket
+        <span class="apidocSignatureSpan">(cb, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">space-before-generic-bracket = function (cb, context) {
+<span class="apidocCodeCommentSpan">/* [wrapped with _.partial] */
+</span>  var checkThisFile = !_lodash2.default.get(context, 'settings.flowtype.onlyFilesWithFlowAnnotation') || (0, _isFlowFile2.default
+)(context);
+
+  if (!checkThisFile) {
+    return function () {};
+  }
+
+  return cb(context);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-flowtype.rules.space-before-type-colon" id="apidoc.element.eslint-plugin-flowtype.rules.space-before-type-colon">
+        function <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.</span>space-before-type-colon
+        <span class="apidocSignatureSpan">(cb, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">space-before-type-colon = function (cb, context) {
+<span class="apidocCodeCommentSpan">/* [wrapped with _.partial] */
+</span>  var checkThisFile = !_lodash2.default.get(context, 'settings.flowtype.onlyFilesWithFlowAnnotation') || (0, _isFlowFile2.default
+)(context);
+
+  if (!checkThisFile) {
+    return function () {};
+  }
+
+  return cb(context);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-flowtype.rules.type-id-match" id="apidoc.element.eslint-plugin-flowtype.rules.type-id-match">
+        function <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.</span>type-id-match
+        <span class="apidocSignatureSpan">(cb, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">type-id-match = function (cb, context) {
+<span class="apidocCodeCommentSpan">/* [wrapped with _.partial] */
+</span>  var checkThisFile = !_lodash2.default.get(context, 'settings.flowtype.onlyFilesWithFlowAnnotation') || (0, _isFlowFile2.default
+)(context);
+
+  if (!checkThisFile) {
+    return function () {};
+  }
+
+  return cb(context);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-flowtype.rules.union-intersection-spacing" id="apidoc.element.eslint-plugin-flowtype.rules.union-intersection-spacing">
+        function <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.</span>union-intersection-spacing
+        <span class="apidocSignatureSpan">(cb, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">union-intersection-spacing = function (cb, context) {
+<span class="apidocCodeCommentSpan">/* [wrapped with _.partial] */
+</span>  var checkThisFile = !_lodash2.default.get(context, 'settings.flowtype.onlyFilesWithFlowAnnotation') || (0, _isFlowFile2.default
+)(context);
+
+  if (!checkThisFile) {
+    return function () {};
+  }
+
+  return cb(context);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-flowtype.rules.use-flow-type" id="apidoc.element.eslint-plugin-flowtype.rules.use-flow-type">
+        function <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.</span>use-flow-type
+        <span class="apidocSignatureSpan">(cb, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">use-flow-type = function (cb, context) {
+<span class="apidocCodeCommentSpan">/* [wrapped with _.partial] */
+</span>  var checkThisFile = !_lodash2.default.get(context, 'settings.flowtype.onlyFilesWithFlowAnnotation') || (0, _isFlowFile2.default
+)(context);
+
+  if (!checkThisFile) {
+    return function () {};
+  }
+
+  return cb(context);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-flowtype.rules.no-primitive-constructor-types" id="apidoc.module.eslint-plugin-flowtype.rules.no-primitive-constructor-types">module eslint-plugin-flowtype.rules.no-primitive-constructor-types</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-flowtype.rules.no-primitive-constructor-types.create" id="apidoc.element.eslint-plugin-flowtype.rules.no-primitive-constructor-types.create">
+        function <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.no-primitive-constructor-types.</span>create
+        <span class="apidocSignatureSpan">(cb, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (cb, context) {
+<span class="apidocCodeCommentSpan">/* [wrapped with _.partial] */
+</span>  var checkThisFile = !_lodash2.default.get(context, 'settings.flowtype.onlyFilesWithFlowAnnotation') || (0, _isFlowFile2.default
+)(context);
+
+  if (!checkThisFile) {
+    return function () {};
+  }
+
+  return cb(context);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-flowtype.rules.object-type-delimiter" id="apidoc.module.eslint-plugin-flowtype.rules.object-type-delimiter">module eslint-plugin-flowtype.rules.object-type-delimiter</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-flowtype.rules.object-type-delimiter.create" id="apidoc.element.eslint-plugin-flowtype.rules.object-type-delimiter.create">
+        function <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.object-type-delimiter.</span>create
+        <span class="apidocSignatureSpan">(cb, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (cb, context) {
+<span class="apidocCodeCommentSpan">/* [wrapped with _.partial] */
+</span>  var checkThisFile = !_lodash2.default.get(context, 'settings.flowtype.onlyFilesWithFlowAnnotation') || (0, _isFlowFile2.default
+)(context);
+
+  if (!checkThisFile) {
+    return function () {};
+  }
+
+  return cb(context);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-flowtype.rules.valid-syntax" id="apidoc.module.eslint-plugin-flowtype.rules.valid-syntax">module eslint-plugin-flowtype.rules.valid-syntax</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-flowtype.rules.valid-syntax.create" id="apidoc.element.eslint-plugin-flowtype.rules.valid-syntax.create">
+        function <span class="apidocSignatureSpan">eslint-plugin-flowtype.rules.valid-syntax.</span>create
+        <span class="apidocSignatureSpan">(cb, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (cb, context) {
+<span class="apidocCodeCommentSpan">/* [wrapped with _.partial] */
+</span>  var checkThisFile = !_lodash2.default.get(context, 'settings.flowtype.onlyFilesWithFlowAnnotation') || (0, _isFlowFile2.default
+)(context);
+
+  if (!checkThisFile) {
+    return function () {};
+  }
+
+  return cb(context);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
